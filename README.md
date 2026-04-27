@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Product Review Classifier
 
 ## 🎯 Quick Summary
@@ -399,3 +400,6 @@ Before submitting or deploying:
 **Enjoy using Product Review Classifier! 🚀**
 
 For detailed information, refer to the comprehensive documentation files included in this package.
+=======
+# Product-Review-Classifier
+>>>>>>> 82519709d5783b73f7891c48cfe66487d5cc760f
