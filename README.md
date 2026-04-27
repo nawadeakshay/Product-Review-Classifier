@@ -6,23 +6,62 @@
 
 ## 📌 Overview
 
-**Product Review Classifier** is a production-ready AI system that automatically analyzes customer reviews to:
+Product Review Classifier is an AI-powered system that automatically analyzes customer reviews to:
 
 * ✅ Detect **Sentiment** (Positive / Negative)
-* 🛠️ Identify **Bug Categories** (Audio, Login, UI, Other)
+* 🛠️ Identify **Bug Categories** (Login, Audio, UI, Other)
 * 📊 Generate **Excel Reports** for business insights
 
-This system combines **Deep Learning (RoBERTa)** with **Rule-Based Classification** to deliver high accuracy, speed, and explainability.
+It combines **RoBERTa (Deep Learning)** with **Rule-Based Logic** for high accuracy and explainability.
 
 ---
 
-## 🎯 Key Highlights
+## ⭐ Key Highlights
 
 * 🔥 **96.2% Accuracy** in sentiment detection
-* ⚡ **1250+ reviews/minute** (GPU performance)
+* ⚡ **1250+ reviews/minute** (GPU)
 * 💰 **99.7% cost reduction** vs manual analysis
-* 📄 Automated **Excel report generation**
-* 🧠 Hybrid AI model (ML + Rule-Based)
+* 📄 Automated Excel report generation
+* 🧠 Hybrid AI system (ML + Rule-Based)
+
+---
+
+## 📊 Visual Insights
+
+### Sentiment Distribution
+
+![Sentiment Chart](outputs/charts/sentiment_bar.png)
+
+### Bug Category Distribution
+
+![Bug Chart](outputs/charts/bug_pie.png)
+
+---
+
+## ⚡ Quick Demo
+
+Run this command:
+
+```bash
+python predict.py
+```
+
+📊 Output:
+
+* Excel file generated automatically
+* Contains:
+
+  * Review Text
+  * Predicted Sentiment
+  * Bug Category
+
+📁 Output file:
+
+```
+outputs/prediction_1.xlsx
+```
+
+👉 File auto-opens for quick analysis.
 
 ---
 
@@ -46,27 +85,11 @@ Excel Output Report
 
 ## 🧩 Features
 
-### 🔍 Sentiment Analysis
-
-* Classifies reviews into:
-
-  * Positive
-  * Negative
-
-### 🛠️ Bug Classification (Only for Negative Reviews)
-
-* Login Issues
-* Audio Issues
-* UI Issues
-* Other
-
-### 📊 Output
-
-* Generates Excel file with:
-
-  * Review Text
-  * Predicted Sentiment
-  * Bug Category
+* 🔍 Sentiment Classification (Positive / Negative)
+* 🛠️ Bug Categorization for negative reviews
+* 📊 Excel report generation
+* ⚡ High-speed batch processing
+* 🧠 Transformer-based NLP model
 
 ---
 
@@ -75,23 +98,20 @@ Excel Output Report
 ```
 product_review_classifier/
 │
-├── data_loader.py          # Data loading & validation
-├── preprocessing.py        # Text cleaning & tokenization
-├── model.py                # RoBERTa model architecture
-├── train.py                # Model training pipeline
-├── predict.py              # Inference & Excel output
-├── requirements.txt        # Dependencies
+├── data_loader.py
+├── preprocessing.py
+├── model.py
+├── train.py
+├── predict.py
+├── requirements.txt
 │
 ├── data/
-│   └── reviews.csv         # Input dataset
-│
-├── models/                 # (Not included due to size)
+│   └── reviews.csv
 │
 ├── outputs/
-│   └── prediction_*.xlsx   # Generated reports
+│   └── prediction_*.xlsx
 │
 ├── FINAL_PROJECT_SUMMARY.md
-├── DOCUMENTATION_INDEX.md
 └── README.md
 ```
 
@@ -100,20 +120,12 @@ product_review_classifier/
 ## ⚙️ Installation
 
 ```bash
-# Clone repository
 git clone https://github.com/nawadeakshay/Product-Review-Classifier.git
-
-# Go to project folder
 cd Product-Review-Classifier
 
-# Create virtual environment
 python -m venv .venv
+.venv\Scripts\activate   # Windows
 
-# Activate environment
-# Windows
-.venv\Scripts\activate
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
@@ -123,12 +135,6 @@ pip install -r requirements.txt
 
 ```bash
 python predict.py
-```
-
-📊 Output will be generated in:
-
-```
-outputs/prediction_1.xlsx
 ```
 
 ---
@@ -170,14 +176,14 @@ outputs/prediction_1.xlsx
 ## ⚠️ Limitations
 
 * Rule-based bug classification (not ML-based)
-* English language only
+* English-only support
 * No real-time dashboard
 
 ---
 
 ## 🚀 Future Improvements
 
-* Replace rule-based with ML bug classifier
+* Replace rule-based with ML-based bug classifier
 * Add web dashboard (Flask/React)
 * Multi-language support
 * Deploy as REST API
@@ -188,12 +194,13 @@ outputs/prediction_1.xlsx
 
 **Akshay Nawade**
 📍 Pune, India
+🎯 Aspiring Software Engineer | Machine Learning Enthusiast
 
 ---
 
 ## 📌 Note
 
-⚠️ Pre-trained model files (`.pt`) are not included due to size limitations.
+Pre-trained model files (`.pt`) are not included due to size limitations.
 You can train the model using:
 
 ```bash
@@ -202,6 +209,6 @@ python train.py
 
 ---
 
-## ⭐ If you like this project
+## ⭐ Support
 
-Give it a ⭐ on GitHub and support the work!
+If you found this project useful, consider giving it a ⭐ on GitHub!
