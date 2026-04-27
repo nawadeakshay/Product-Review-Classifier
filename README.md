@@ -101,7 +101,7 @@ product_review_classifier/
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/Product-Review-Classifier.git
+git clone https://github.com/nawadeakshay/Product-Review-Classifier.git
 
 # Go to project folder
 cd Product-Review-Classifier
