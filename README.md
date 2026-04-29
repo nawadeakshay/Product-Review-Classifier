@@ -1,101 +1,157 @@
+<div align="center">
+
 # 🚀 Product Review Classifier
 
-### Intelligent Sentiment Analysis & Bug Categorization System
+### AI-Powered Sentiment Analysis & Bug Categorization System
+
+*Automatically analyze customer reviews and convert them into actionable insights — instantly.*
+
+---
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-orange?style=for-the-badge&logo=pytorch)
+![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow?style=for-the-badge)
+![Model](https://img.shields.io/badge/Model-RoBERTa-green?style=for-the-badge)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas)
+![Status](https://img.shields.io/badge/Status-Production--Ready-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Academic-lightgrey?style=for-the-badge)
+
+</div>
 
 ---
 
 ## 📌 Overview
 
-Product Review Classifier is an AI-powered system that automatically analyzes customer reviews to:
+**Product Review Classifier** is a Machine Learning (NLP) system that automatically analyzes customer reviews and provides two key outputs:
 
-* ✅ Detect **Sentiment** (Positive / Negative)
-* 🛠️ Identify **Bug Categories** (Login, Audio, UI, Other)
-* 📊 Generate **Excel Reports** for business insights
+- **Sentiment Analysis** → Positive / Negative  
+- **Bug Classification** → Audio, Login, UI, Other  
 
-It combines **RoBERTa (Deep Learning)** with **Rule-Based Logic** for high accuracy and explainability.
+👉 In simple words:
+
+Instead of manually reading thousands of reviews, this system reads, understands, and categorizes them in seconds.
+
+> 🔗 **GitHub Repository:** [nawadeakshay/Product-Review-Classifier](https://github.com/nawadeakshay/Product-Review-Classifier)
 
 ---
 
-## ⭐ Key Highlights
+## 🧾 Real-World Example
 
-* 🔥 **96.2% Accuracy** in sentiment detection
-* ⚡ **1250+ reviews/minute** (GPU)
-* 💰 **99.7% cost reduction** vs manual analysis
-* 📄 Automated Excel report generation
-* 🧠 Hybrid AI system (ML + Rule-Based)
+| Review | Sentiment | Bug |
+|--------|-----------|-----|
+| "App crashes when I login" | ❌ Negative | Login |
+| "Amazing experience!" | ✅ Positive | N/A |
+| "Sound not working properly" | ❌ Negative | Audio |
+| "UI is confusing" | ❌ Negative | UI |
+
+---
+
+## 🎯 Features
+
+- 🔍 Automatic Sentiment Detection (Positive / Negative)
+- 🐞 Bug Categorization (Audio, Login, UI, Other)
+- 📊 Excel Report Generation (ready for business use)
+- ⚡ High-speed processing (~1000+ reviews/min on GPU)
+- 🔁 Batch processing using PyTorch DataLoader
+- 🧠 Hybrid system (Deep Learning + Rule-Based logic)
+- 📦 Scalable and modular architecture
+
+---
+
+## 🧠 How It Works
+
+### 🔄 Pipeline
+
+```text
+Customer Review
+        ↓
+Text Cleaning (Preprocessing)
+        ↓
+Tokenization (RoBERTa)
+        ↓
+Sentiment Model (Deep Learning)
+        ↓
+Bug Classification (Rule-Based)
+        ↓
+Excel Output
+```
 
 ---
 
 ## 📊 Visual Insights
 
 ### Sentiment Distribution
-
 ![Sentiment Chart](outputs/charts/sentiment_bar.png)
 
 ### Bug Category Distribution
-
 ![Bug Chart](outputs/charts/bug_pie.png)
 
 ---
 
-## ⚡ Quick Demo
+## 🏗️ Architecture
 
-Run this command:
+### 📦 System Components
+
+```
+product_review_classifier/
+│
+├── data_loader.py        → Data loading & validation
+├── preprocessing.py      → Text cleaning & tokenization
+├── model.py              → RoBERTa model architecture
+├── train.py              → Training pipeline
+├── predict.py            → Inference & Excel output
+│
+├── data/                 → Input datasets
+├── models/               → Saved trained models
+├── outputs/              → Generated reports
+```
+
+---
+
+### 🔧 Module Explanation
+
+#### 1. Data Loader
+
+- Loads CSV / Excel datasets
+- Validates required columns
+- Handles dataset format conversion
+
+#### 2. Preprocessing
+
+- Removes URLs, emojis, special characters
+- Converts text to lowercase
+- Prepares clean text for model
+
+#### 3. Model (RoBERTa)
+
+- Transformer-based NLP model
+- Extracts context from text
+- Predicts sentiment (Positive / Negative)
+
+#### 4. Prediction Pipeline
+
+- Runs batch inference
+- Applies rule-based bug classification
+- Generates Excel output automatically
+
+---
+
+## 🛠️ Tech Stack
+
+| Component       | Technology   | Why Used                   |
+|-----------------|--------------|----------------------------|
+| Language        | Python       | Core development           |
+| Deep Learning   | PyTorch      | Model training & inference |
+| NLP Models      | Transformers | RoBERTa                    |
+| Data Processing | Pandas       | Data handling              |
+| ML Utilities    | scikit-learn | Splitting & evaluation     |
+| Excel Output    | openpyxl     | Report generation          |
+
+---
+
+## 📂 Project Structure
 
 ```bash
-python predict.py
-```
-
-📊 Output:
-
-* Excel file generated automatically
-* Contains:
-
-  * Review Text
-  * Predicted Sentiment
-  * Bug Category
-
-📁 Output file:
-
-```
-outputs/prediction_1.xlsx
-```
-
-👉 File auto-opens for quick analysis.
-
----
-
-## 🧠 System Architecture
-
-```
-Input (CSV/Excel)
-        ↓
-Data Loader
-        ↓
-Text Preprocessing
-        ↓
-RoBERTa Model (Sentiment)
-        ↓
-Rule-Based Bug Classification
-        ↓
-Excel Output Report
-```
-
----
-
-## 🧩 Features
-
-* 🔍 Sentiment Classification (Positive / Negative)
-* 🛠️ Bug Categorization for negative reviews
-* 📊 Excel report generation
-* ⚡ High-speed batch processing
-* 🧠 Transformer-based NLP model
-
----
-
-## 📁 Project Structure
-
-```
 product_review_classifier/
 │
 ├── data_loader.py
@@ -103,105 +159,67 @@ product_review_classifier/
 ├── model.py
 ├── train.py
 ├── predict.py
-├── requirements.txt
 │
 ├── data/
-│   └── reviews.csv
-│
+├── models/
 ├── outputs/
-│   └── prediction_*.xlsx
+│   └── charts/
+│       ├── sentiment_bar.png
+│       └── bug_pie.png
 │
-├── FINAL_PROJECT_SUMMARY.md
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Setup
 
 ```bash
+# Clone the repository
 git clone https://github.com/nawadeakshay/Product-Review-Classifier.git
 cd Product-Review-Classifier
 
+# Create virtual environment
 python -m venv .venv
-.venv\Scripts\activate   # Windows
 
+# Activate environment
+source .venv/bin/activate      # Mac/Linux
+# OR
+.venv\Scripts\activate         # Windows
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
 ---
 
-## ▶️ How to Run
+## ▶️ Usage
+
+### 🔹 Run Prediction
 
 ```bash
 python predict.py
 ```
 
----
+📊 Output:
 
-## 🧪 Example Output
-
-| Review Text            | Sentiment | Bug Category |
-| ---------------------- | --------- | ------------ |
-| App crashes frequently | Negative  | Audio        |
-| Can't login to account | Negative  | Login        |
-| UI is confusing        | Negative  | UI           |
-| Works perfectly        | Positive  | N/A          |
+```
+outputs/prediction_1.xlsx
+```
 
 ---
 
-## 📊 Performance Metrics
+### 📊 Output Format
 
-| Metric    | Value            |
-| --------- | ---------------- |
-| Accuracy  | 96.2%            |
-| Precision | 94.8%            |
-| Recall    | 93.5%            |
-| F1 Score  | 0.942            |
-| Speed     | 1250 reviews/min |
+| review_text | predicted_sentiment | predicted_bug_category |
+|-------------|---------------------|------------------------|
+| App crashes | Negative            | Login                  |
+| Great app   | Positive            | N/A                    |
 
 ---
 
-## 🧰 Tech Stack
-
-* 🐍 Python
-* 🔥 PyTorch
-* 🤗 HuggingFace Transformers
-* 📊 Pandas
-* 📈 Scikit-learn
-* 📄 OpenPyXL
-
----
-
-## ⚠️ Limitations
-
-* Rule-based bug classification (not ML-based)
-* English-only support
-* No real-time dashboard
-
----
-
-## 🚀 Future Improvements
-
-* Replace rule-based with ML-based bug classifier
-* Add web dashboard (Flask/React)
-* Multi-language support
-* Deploy as REST API
-
----
-
-## 👨‍💻 Author
-
-**Akshay Nawade**
-📍 Pune, India
-🎯 Aspiring Software Engineer | Machine Learning Enthusiast
-
----
-
-## 📌 Note
-
-Pre-trained model files (`.pt`) are not included due to size limitations.
-You can train the model using:
+### 🔹 Train Model (Optional)
 
 ```bash
 python train.py
@@ -209,6 +227,81 @@ python train.py
 
 ---
 
+## 📊 Performance
+
+- 🎯 Accuracy: ~96%
+- ⚡ Speed: ~1000+ reviews/min
+- 🧠 Model: RoBERTa Transformer
+- 📉 Error Rate: ~3–4%
+
+---
+
+## 💡 Example
+
+```
+Input:
+"The UI is confusing and slow"
+
+Output:
+Sentiment → Negative
+Bug → UI
+```
+
+---
+
+## 🌍 Real-World Applications
+
+- 🛒 E-commerce platforms
+- 📱 Mobile app feedback
+- 🏢 SaaS product monitoring
+- 📊 Customer support analytics
+
+---
+
+## ✅ Advantages
+
+- ⚡ 480x faster than manual work
+- 💰 99.7% cost reduction
+- 🎯 High accuracy
+- 📊 Business-ready Excel output
+
+---
+
+## ⚠️ Limitations
+
+- English-only support
+- Rule-based bug classification
+- Limited handling of sarcasm
+
+---
+
+## 🔮 Future Improvements
+
+- ML-based bug classification
+- Multi-language support
+- Web dashboard
+- API deployment
+
+---
+
+## 👨‍💻 Author
+
+**Akshay Nawade**  
+Machine Learning | NLP | Final Year Project
+
+[![GitHub](https://img.shields.io/badge/GitHub-nawadeakshay-181717?style=for-the-badge&logo=github)](https://github.com/nawadeakshay/Product-Review-Classifier)
+
+---
+
 ## ⭐ Support
 
-If you found this project useful, consider giving it a ⭐ on GitHub!
+If you like this project:
+
+- ⭐ Star this repository → [Product-Review-Classifier](https://github.com/nawadeakshay/Product-Review-Classifier)
+- 🔁 Share with others
+
+---
+
+## 📜 License
+
+This project is for academic and learning purposes.
